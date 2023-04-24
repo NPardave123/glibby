@@ -33,6 +33,15 @@ namespace glibby
 			return true;
 		}
 
+		//The function prints the values of the point
+		void print() {
+			std::cout << "Point: { ";
+			for (int i = 0; i < N; i++) {
+				std::cout << coord[i] << " ";
+			}
+			std::cout << "}" << std::endl;
+		}
+
 		friend std::ostream& operator<<(std::ostream& out, const Point<T, N>& point) {
 			out << "(";
 			for (int i = 0; i < N; i++) {

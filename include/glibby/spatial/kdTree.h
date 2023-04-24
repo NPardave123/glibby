@@ -94,6 +94,18 @@ namespace glibby
 			}
 		}
 
+		Point<T,N> NearestNeighbor(const Point<T,N>& point) {
+			
+		}
+
+		std::vector<Point<T, N>> KNearestNeighbor(const std::vector<Point<T,N>>& points) {
+			std::vector<Point<T, N>> ans;
+			for (int i = 0; i < points.size(); i++) {
+				ans.push_back(NearestNeighbor(points[i]));
+			}
+			return ans;
+		}
+
 
 		//Help for debugging(will remove when completed with test cases)
 		void DFSPrint() {

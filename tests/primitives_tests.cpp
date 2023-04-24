@@ -66,6 +66,11 @@ TEST_CASE("PointND distance", "[primitive][point]") {
     CHECK_THAT(glibby::ManhattanDistance(p1, p2), Catch::Matchers::WithinAbs(36.0f, FLT_NEAR_ZERO));
 }
 
+TEST_CASE("PointND print", "[primitive][point]") {
+    glibby::Point3 p1({ 5.0f, 15.0f, 10.0f });
+    p1.print();
+}
+
 /*TEST_CASE("Point2D distance", "[!benchmark][primitive][point2D]") {
     BENCHMARK("Point2D distance") {
         glibby::Point2D p1 = { 0.0f, 0.0f };
